@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <radialGradient id="tube" gradientUnits="userSpaceOnUse" cx="100" cy="100" r="86">
+      <stop offset=".44" stop-color="#6E9E0A"/>
+      <stop offset=".52" stop-color="#A8D72E"/>
+      <stop offset=".62" stop-color="#E2FA8E"/>
+      <stop offset=".69" stop-color="#F6FFD6"/>
+      <stop offset=".78" stop-color="#D3F168"/>
+      <stop offset=".9" stop-color="#AEDC34"/>
+      <stop offset="1" stop-color="#76A70C"/>
+    </radialGradient>
+    <linearGradient id="light" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".45"/>
+      <stop offset=".45" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".6" stop-color="#335200" stop-opacity="0"/>
+      <stop offset="1" stop-color="#335200" stop-opacity=".42"/>
+    </linearGradient>
+    <filter id="mid" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.4"/></filter>
+    <filter id="sharp" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1"/></filter>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4"/></filter>
+  </defs>
+  <circle cx="100" cy="100" r="62" fill="none" stroke="url(#tube)" stroke-width="46"/>
+  <circle cx="100" cy="100" r="62" fill="none" stroke="url(#light)" stroke-width="46"/>
+  <g stroke="#F4FFD0" stroke-linecap="round" opacity=".55" filter="url(#sharp)">
+    <path d="M100 17v8M100 175v8M17 100h8M175 100h8" stroke-width="2.4" transform="rotate(22 100 100)"/>
+  </g>
+  <path d="M46 66a64 64 0 0 1 36-30" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" opacity=".6" filter="url(#soft)"/>
+  <path d="M50 64a60 60 0 0 1 28-24" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".95" filter="url(#sharp)"/>
+  <path d="M148 128a54 54 0 0 1-18 20" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".45" filter="url(#mid)"/>
+  <path d="M132 66a42 42 0 0 1 8 14" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".5" filter="url(#mid)"/>
+</svg>

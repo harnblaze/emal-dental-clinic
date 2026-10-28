@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 190" width="240" height="190">
+  <defs>
+    <radialGradient id="base" cx=".3" cy=".25" r=".95">
+      <stop offset="0" stop-color="#F6FFD3"/>
+      <stop offset=".3" stop-color="#DDF883"/>
+      <stop offset=".62" stop-color="#C3EC4C"/>
+      <stop offset="1" stop-color="#86B812"/>
+    </radialGradient>
+    <radialGradient id="eye" cx=".36" cy=".3" r=".78">
+      <stop offset="0" stop-color="#E4FFFC"/>
+      <stop offset=".2" stop-color="#8DEBE2"/>
+      <stop offset=".55" stop-color="#2EC4C7"/>
+      <stop offset=".85" stop-color="#16939B"/>
+      <stop offset="1" stop-color="#0E6F7A"/>
+    </radialGradient>
+    <filter id="puff" filterUnits="userSpaceOnUse" x="0" y="0" width="240" height="190" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="9" result="b1"/>
+      <feOffset in="b1" dx="-8" dy="-11" result="o1"/>
+      <feComposite in="SourceAlpha" in2="o1" operator="out" result="r1"/>
+      <feFlood flood-color="#4E7F00" flood-opacity=".6"/>
+      <feComposite in2="r1" operator="in" result="shade"/>
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="b2"/>
+      <feOffset in="b2" dx="3" dy="4" result="o2"/>
+      <feComposite in="SourceAlpha" in2="o2" operator="out" result="r2"/>
+      <feFlood flood-color="#FFFFFF" flood-opacity=".75"/>
+      <feComposite in2="r2" operator="in" result="rim"/>
+      <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="shade"/><feMergeNode in="rim"/></feMerge>
+    </filter>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>
+    <filter id="sharp" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1"/></filter>
+  </defs>
+  <path d="M36 78c0 84 168 84 168 0" fill="none" stroke="url(#base)" stroke-width="44" stroke-linecap="round" filter="url(#puff)"/>
+  <path d="M28 86c4 50 46 70 92 72" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".7" filter="url(#soft)"/>
+  <path d="M31 92c5 34 28 52 56 60" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" filter="url(#sharp)"/>
+  <circle cx="28" cy="74" r="5" fill="#fff" opacity=".6" filter="url(#soft)"/>
+  <g>
+    <circle cx="72" cy="30" r="24" fill="url(#eye)"/>
+    <ellipse cx="64" cy="21" rx="8" ry="4.5" fill="#fff" opacity=".9" filter="url(#sharp)" transform="rotate(-32 64 21)"/>
+    <circle cx="168" cy="30" r="24" fill="url(#eye)"/>
+    <ellipse cx="160" cy="21" rx="8" ry="4.5" fill="#fff" opacity=".9" filter="url(#sharp)" transform="rotate(-32 160 21)"/>
+  </g>
+</svg>

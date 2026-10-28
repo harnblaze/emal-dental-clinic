@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="140" height="140">
+  <defs>
+    <linearGradient id="base" gradientUnits="userSpaceOnUse" x1="10" y1="10" x2="130" y2="130">
+      <stop offset="0" stop-color="#C9F6F6"/>
+      <stop offset=".3" stop-color="#63D5D8"/>
+      <stop offset=".7" stop-color="#4A8DD6"/>
+      <stop offset="1" stop-color="#335FB3"/>
+    </linearGradient>
+    <clipPath id="clip">
+      <rect x="47" y="8" width="46" height="124" rx="23"/>
+      <rect x="8" y="47" width="124" height="46" rx="23"/>
+    </clipPath>
+    <filter id="puff" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="9" result="b1"/>
+      <feOffset in="b1" dx="-8" dy="-10" result="o1"/>
+      <feComposite in="SourceAlpha" in2="o1" operator="out" result="r1"/>
+      <feFlood flood-color="#17387A" flood-opacity=".55"/>
+      <feComposite in2="r1" operator="in" result="shade"/>
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="b2"/>
+      <feOffset in="b2" dx="3" dy="4" result="o2"/>
+      <feComposite in="SourceAlpha" in2="o2" operator="out" result="r2"/>
+      <feFlood flood-color="#FFFFFF" flood-opacity=".85"/>
+      <feComposite in2="r2" operator="in" result="rim"/>
+      <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="shade"/><feMergeNode in="rim"/></feMerge>
+    </filter>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3.4"/></filter>
+    <filter id="sharp" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1"/></filter>
+  </defs>
+  <g filter="url(#puff)">
+    <rect x="47" y="8" width="46" height="124" rx="23" fill="url(#base)"/>
+    <rect x="8" y="47" width="124" height="46" rx="23" fill="url(#base)"/>
+  </g>
+  <g clip-path="url(#clip)">
+    <ellipse cx="62" cy="30" rx="6" ry="16" fill="#fff" opacity=".75" filter="url(#soft)"/>
+    <ellipse cx="60" cy="26" rx="2.4" ry="9" fill="#fff" filter="url(#sharp)"/>
+    <ellipse cx="30" cy="60" rx="14" ry="5" fill="#fff" opacity=".7" filter="url(#soft)"/>
+    <ellipse cx="26" cy="58" rx="7" ry="2.2" fill="#fff" filter="url(#sharp)"/>
+    <ellipse cx="96" cy="84" rx="30" ry="12" fill="#fff" opacity=".12" filter="url(#soft)"/>
+  </g>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="8 -42 300 232" width="300" height="232">
+  <defs>
+    <linearGradient id="handle" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#A2D32A"/>
+      <stop offset=".16" stop-color="#E6FB9C"/>
+      <stop offset=".3" stop-color="#F8FFDB"/>
+      <stop offset=".55" stop-color="#CDEF5E"/>
+      <stop offset=".82" stop-color="#A4D52E"/>
+      <stop offset="1" stop-color="#6E9E0A"/>
+    </linearGradient>
+    <linearGradient id="grip" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8FE6DF"/>
+      <stop offset=".3" stop-color="#DDFFFB"/>
+      <stop offset=".62" stop-color="#3CCBC3"/>
+      <stop offset="1" stop-color="#16868A"/>
+    </linearGradient>
+    <linearGradient id="tuftW" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C9E6F2"/>
+      <stop offset=".4" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#9DC7DA"/>
+    </linearGradient>
+    <linearGradient id="tuftT" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3DB7C0"/>
+      <stop offset=".4" stop-color="#9AF0EA"/>
+      <stop offset="1" stop-color="#1F8E99"/>
+    </linearGradient>
+    <filter id="puff" x="-10%" y="-30%" width="120%" height="160%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="b1"/>
+      <feOffset in="b1" dx="-4" dy="-7" result="o1"/>
+      <feComposite in="SourceAlpha" in2="o1" operator="out" result="r1"/>
+      <feFlood flood-color="#4E7F00" flood-opacity=".45"/>
+      <feComposite in2="r1" operator="in" result="shade"/>
+      <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="shade"/></feMerge>
+    </filter>
+    <filter id="sharp" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1.1"/></filter>
+    <filter id="mid" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.2"/></filter>
+  </defs>
+  <g transform="rotate(-32 158 74)">
+    <g>
+      <rect x="241" y="36" width="9" height="40" rx="4.5" fill="url(#tuftW)"/>
+      <rect x="252" y="32" width="9" height="44" rx="4.5" fill="url(#tuftT)"/>
+      <rect x="263" y="34" width="9" height="42" rx="4.5" fill="url(#tuftW)"/>
+      <rect x="274" y="32" width="9" height="44" rx="4.5" fill="url(#tuftT)"/>
+      <rect x="285" y="36" width="9" height="40" rx="4.5" fill="url(#tuftW)"/>
+      <path d="M244 40h3M255 36h3M266 38h3M277 36h3M288 40h3" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".9"/>
+    </g>
+    <path d="M34 70h114c14 0 20 10 34 10h34c10 0 12-8 24-8h50c10 0 16 8 16 20s-6 20-16 20h-50c-12 0-14-8-24-8h-34c-14 0-20 10-34 10H34c-14 0-24-10-24-22s10-22 24-22Z" fill="url(#handle)" filter="url(#puff)"/>
+    <rect x="38" y="81" width="92" height="22" rx="11" fill="url(#grip)"/>
+    <rect x="46" y="84" width="60" height="4" rx="2" fill="#fff" opacity=".85" filter="url(#sharp)"/>
+    <rect x="26" y="75" width="118" height="5" rx="2.5" fill="#fff" opacity=".75" filter="url(#sharp)"/>
+    <rect x="186" y="84" width="30" height="3" rx="1.5" fill="#fff" opacity=".7" filter="url(#sharp)"/>
+    <rect x="246" y="77" width="44" height="4" rx="2" fill="#fff" opacity=".8" filter="url(#sharp)"/>
+    <ellipse cx="22" cy="92" rx="3" ry="10" fill="#fff" opacity=".45" filter="url(#mid)"/>
+  </g>
+</svg>
